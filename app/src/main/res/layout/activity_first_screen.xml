@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstScreen"
+    android:background="@drawable/background1">
+
+
+    <Button
+        android:id="@+id/signup"
+        android:layout_width="280dp"
+        android:layout_height="71dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="78dp"
+        android:backgroundTint="#ACAFB2"
+        android:text="Sign Up"
+        android:textColor="#000000"
+        android:textSize="27sp"
+        app:cornerRadius="55dp" />
+
+    <TextView
+        android:id="@+id/logo"
+        android:layout_width="329dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageView6"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="282dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="40dp"
+        android:fontFamily="@font/dust_serif"
+        android:gravity="center"
+        android:text="GUISBA"
+        android:textColor="@color/white"
+        android:textSize="75sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="280dp"
+        android:layout_height="71dp"
+
+        android:layout_alignBottom="@+id/signup"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="118dp"
+
+        android:backgroundTint="#E4E8EC"
+        android:bottomLeftRadius="55dp"
+        android:bottomRightRadius="55dp"
+        android:text="Log in"
+        android:textColor="#000000"
+        android:textSize="27sp"
+        android:topLeftRadius="55dp"
+        android:topRightRadius="55dp"
+        android:visibility="visible"
+        app:cornerRadius="55dp"
+        app:iconTint="#E4E8EC" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="389dp"
+        android:layout_height="228dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp"
+        app:srcCompat="@drawable/logow" />
+
+
+</RelativeLayout>

@@ -1,0 +1,68 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/background1"
+    android:padding="16dp">
+
+    <EditText
+        android:layout_marginTop="28dp"
+        android:id="@+id/et_license_plate1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="License plate 1"
+        android:maxLength="6"
+        android:padding="16dp"/>
+
+    <EditText
+        android:id="@+id/et_license_plate2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="License plate 2"
+        android:maxLength="6"
+        android:padding="16dp"/>
+
+    <EditText
+        android:id="@+id/et_license_plate3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="License plate 3"
+        android:maxLength="6"
+        android:padding="16dp"/>
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:padding="16dp"/>
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="389dp"
+        android:layout_height="228dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp"
+        app:srcCompat="@drawable/logow" />
+
+    <TextView
+        android:id="@+id/logo"
+        android:layout_width="329dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageView6"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="40dp"
+        android:fontFamily="@font/dust_serif"
+        android:gravity="center"
+        android:text="GUISBA"
+        android:textColor="@color/white"
+        android:textSize="75sp"
+        android:textStyle="bold" />
+
+
+</LinearLayout>
