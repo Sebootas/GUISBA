@@ -21,5 +21,11 @@ class Home : AppCompatActivity() {
             val intent: Intent = Intent(this, ModifyMenu:: class.java)
             startActivity(intent)
         }
+
+        val btn2: Button = findViewById(R.id.logOut)
+        btn2.setOnClickListener{
+            val intent: Intent = Intent(this, FirstScreen:: class.java)
+            startActivity(intent)
+        }
     }
 }

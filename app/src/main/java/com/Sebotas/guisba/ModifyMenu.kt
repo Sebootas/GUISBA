@@ -12,7 +12,7 @@ class ModifyMenu : AppCompatActivity() {
 
         val btn: Button = findViewById(R.id.backBTN)
         btn.setOnClickListener{
-            val intent: Intent = Intent(this, FirstScreen:: class.java)
+            val intent: Intent = Intent(this, Home:: class.java)
             startActivity(intent)
         }
         val btn1: Button = findViewById(R.id.vehicles)
