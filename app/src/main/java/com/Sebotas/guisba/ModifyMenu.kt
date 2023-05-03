@@ -25,6 +25,8 @@ class ModifyMenu : AppCompatActivity() {
 
         val btn2: Button = findViewById(R.id.account)
         btn2.setOnClickListener{
+
+
             val intent: Intent = Intent(this, Account:: class.java)
             startActivity(intent)
         }
