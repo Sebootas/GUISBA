@@ -17,32 +17,38 @@ class MetodoPago : AppCompatActivity() {
             val intent: Intent = Intent(this, Home::class.java)
             startActivity(intent)
         }
-        val pseButton = findViewById<Button>(R.id.pse)
-        pseButton.setOnClickListener {
-            val url = "https://www.pse.com.co/persona"
-            val intent = Intent(Intent.ACTION_VIEW)
-            intent.data = Uri.parse(url)
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-            startActivity(intent)
 
-            Handler().postDelayed({
-                val intent2 = Intent(this, SuccessfulPayment::class.java)
-                startActivity(intent2)
-            }, 10000) // 10 second delay
+
+
+        val pseButton = findViewById<Button>(R.id.pse)
+        pseButton.setOnClickListener {val randomNumber = (Math.random() * 2).toInt()
+            if (randomNumber == 0) {
+                // Open the first screen.
+                val intent = Intent(this, SuccessfulPayment::class.java)
+                startActivity(intent)
+            } else {
+                // Open the second screen.
+                val intent = Intent(this, PaymentFailed::class.java)
+                startActivity(intent)
+            }
         }
 
-        val bankButton = findViewById<Button>(R.id.bancolombia)
-        bankButton.setOnClickListener {
-            val url = "https://www.bancolombia.com/personas"
-            val intent = Intent(Intent.ACTION_VIEW)
-            intent.data = Uri.parse(url)
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-            startActivity(intent)
 
-            Handler().postDelayed({
-                val intent2 = Intent(this, SuccessfulPayment::class.java)
-                startActivity(intent2)
-            }, 10000) // 10 second delay
+
+
+        val bankButton = findViewById<Button>(R.id.bancolombia)
+        bankButton.setOnClickListener {val randomNumber = (Math.random() * 2).toInt()
+
+
+                if (randomNumber == 0) {
+                // Open the first screen.
+                val intent = Intent(this, SuccessfulPayment::class.java)
+                startActivity(intent)
+            } else {
+                // Open the second screen.
+                val intent = Intent(this, PaymentFailed::class.java)
+                startActivity(intent)
+            }
         }
 
         val btnq: Button = findViewById(R.id.tarjeta)
