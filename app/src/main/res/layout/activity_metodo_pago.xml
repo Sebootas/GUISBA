@@ -82,7 +82,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="235dp"
         android:backgroundTint="#ACAFB2"
-        android:text="PSE"
+        android:text="Nequi"
         android:textColor="#000000"
         android:textSize="27sp"
         app:cornerRadius="55dp" />
@@ -98,15 +98,7 @@
         android:elevation="@dimen/cardview_default_elevation"
         app:srcCompat="@drawable/bancolombia" />
 
-    <ImageView
-        android:id="@+id/pselogo"
-        android:layout_width="67dp"
-        android:layout_height="65dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="495dp"
-        android:layout_alignStart="@+id/bancolombia"
-        android:elevation="@dimen/cardview_default_elevation"
-        app:srcCompat="@drawable/pse" />
+
 
     <ImageView
         android:id="@+id/imageView2"
