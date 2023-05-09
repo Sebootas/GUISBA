@@ -12,10 +12,11 @@
         android:theme="@style/Theme.GUISBA"
         tools:targetApi="31">
         <activity
-            android:name=".Bancolombia1"
-            android:exported="false"
-            android:label="@string/title_activity_bancolombia1"
-            android:theme="@style/Theme.GUISBA.NoActionBar" />
+            android:name=".Nequi2"
+            android:exported="false" />
+        <activity
+            android:name=".Bank2"
+            android:exported="false" />
         <activity
             android:name=".Account"
             android:exported="false" />
@@ -33,6 +34,10 @@
         <activity
             android:name=".SuccessfulPayment"
             android:exported="false" />
+        <activity
+            android:name=".PaymentFailed"
+            android:exported="false" />
+
         <activity
             android:name=".Credit"
             android:exported="false" />
