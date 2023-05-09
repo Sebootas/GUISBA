@@ -22,15 +22,11 @@ class MetodoPago : AppCompatActivity() {
 
         val pseButton = findViewById<Button>(R.id.pse)
         pseButton.setOnClickListener {val randomNumber = (Math.random() * 2).toInt()
-            if (randomNumber == 0) {
+
                 // Open the first screen.
-                val intent = Intent(this, SuccessfulPayment::class.java)
-                startActivity(intent)
-            } else {
-                // Open the second screen.
-                val intent = Intent(this, PaymentFailed::class.java)
-                startActivity(intent)
-            }
+            val intent = Intent(this, Nequi2::class.java)
+            startActivity(intent)
+
         }
 
 
@@ -40,15 +36,9 @@ class MetodoPago : AppCompatActivity() {
         bankButton.setOnClickListener {val randomNumber = (Math.random() * 2).toInt()
 
 
-                if (randomNumber == 0) {
-                // Open the first screen.
-                val intent = Intent(this, SuccessfulPayment::class.java)
-                startActivity(intent)
-            } else {
-                // Open the second screen.
-                val intent = Intent(this, PaymentFailed::class.java)
-                startActivity(intent)
-            }
+            val intent = Intent(this, Bank2::class.java)
+            startActivity(intent)
+
         }
 
         val btnq: Button = findViewById(R.id.tarjeta)
