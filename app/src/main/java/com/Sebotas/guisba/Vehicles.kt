@@ -16,6 +16,7 @@ class Vehicles : AppCompatActivity() {
             startActivity(intent)
         }
 
+
         val btn1: Button = findViewById(R.id.add_vehicles)
         btn1.setOnClickListener{
             val intent: Intent = Intent(this, Licence:: class.java)
