@@ -4,6 +4,7 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import android.util.Log
 
 class DBHelper(context: Context): SQLiteOpenHelper(context, "Userdata.db", null, 2) {
     override fun onCreate(db: SQLiteDatabase?) {
@@ -26,7 +27,7 @@ class DBHelper(context: Context): SQLiteOpenHelper(context, "Userdata.db", null,
         return result != -1L
     }
 
-    fun checkuserpass(username: String, password: String, identification: String): Boolean {
+    /*fun checkuserpass(username: String, password: String, identification: String): Boolean {
         val db = this.writableDatabase
         val query = "SELECT * FROM Userdata WHERE username = ? AND password = ? AND identification = ?"
         val selectionArgs = arrayOf(username, password, identification)
@@ -34,5 +35,28 @@ class DBHelper(context: Context): SQLiteOpenHelper(context, "Userdata.db", null,
         val exists = cursor.count > 0
         cursor.close()
         return exists
+    }*/
+
+    fun updatePassword(username: String, newPassword: String) {
+        val db = this.writableDatabase
+        val cv = ContentValues()
+        cv.put("password", newPassword)
+        val rowsAffected = db.update("Userdata", cv, "username = ?", arrayOf(username))
+
+        Log.d("DBHelper", "Update query executed.")
+        Log.d("DBHelper", "Rows affected: $rowsAffected")
     }
+
+
+    fun checkuserpass(username: String, password: String, identification: String): Boolean {
+        val db = this.writableDatabase
+        val query = "SELECT * FROM Userdata WHERE username = ? AND password = ? AND identification = ?"
+        val selectionArgs = arrayOf(username, password, identification)
+        val cursor = db.rawQuery(query, selectionArgs)
+
+        val exists = cursor.count > 0
+        cursor.close()
+        return exists
+    }
+
 }
