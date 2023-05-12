@@ -43,8 +43,11 @@ class DBHelper(context: Context): SQLiteOpenHelper(context, "Userdata.db", null,
         cv.put("password", newPassword)
         val rowsAffected = db.update("Userdata", cv, "username = ?", arrayOf(username))
 
-        Log.d("DBHelper", "Update query executed.")
-        Log.d("DBHelper", "Rows affected: $rowsAffected")
+        if (rowsAffected > 0) {
+            Log.d("DBHelper", "Password update successful.")
+        } else {
+            Log.d("DBHelper", "Failed to update password.")
+        }
     }
 
 
@@ -54,9 +57,10 @@ class DBHelper(context: Context): SQLiteOpenHelper(context, "Userdata.db", null,
         val selectionArgs = arrayOf(username, password, identification)
         val cursor = db.rawQuery(query, selectionArgs)
 
-        val exists = cursor.count > 0
+        val exists = cursor.moveToFirst() // Check if cursor has at least one row
         cursor.close()
         return exists
     }
+
 
 }
