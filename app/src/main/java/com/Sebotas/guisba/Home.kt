@@ -28,6 +28,7 @@ class Home : AppCompatActivity() {
             val intent: Intent = Intent(this, FirstScreen:: class.java)
             startActivity(intent)
         }
+
     }
 
 }
